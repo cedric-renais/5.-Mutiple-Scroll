@@ -1,0 +1,94 @@
+/*********/
+/* Reset */
+/*********/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin-block: 0;
+  margin-inline: 0;
+  padding-block: 0;
+  padding-inline: 0;
+}
+/***********/
+/* General */
+/***********/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #222;
+}
+header,
+main {
+  inline-size: 100%;
+  max-inline-size: 1440px;
+  background: #e6e6e6;
+  margin-inline: auto;
+}
+/**********/
+/* Header */
+/**********/
+.home-mountains {
+  position: relative;
+  block-size: 100vh;
+  background: #222;
+  background: url(./sources/images/background-moutain.webp);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin-inline: auto;
+}
+.home-mountains img {
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+}
+h1 {
+  font-family: Martel Sans;
+  font-weight: 200;
+  font-size: 150px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+h1 span {
+  font-size: 40px;
+  font-family: Montserrat;
+}
+.home-mountains img:nth-child(1) {
+  inline-size: 2000px;
+  top: 45%;
+  left: 0;
+  z-index: 2;
+}
+/***********************/
+/* Header - Breakpoint */
+/***********************/
+@media screen and (max-width: 950px) {
+  h1 {
+    line-height: 1;
+    text-align: center;
+  }
+}
+/********/
+/* Main */
+/********/
+.home-mountains__content {
+  inline-size: 1440px;
+  text-align: left;
+  padding-block-start: 50px;
+  padding-inline: 10px;
+  padding-block-end: 20px;
+  max-inline-size: 800px;
+  margin-inline: auto;
+}
+.home-mountains__content h2 {
+  font-size: 50px;
+
+  padding-block-end: 30px;
+}
+.home-mountains__content p {
+  font-size: 20px;
+}
